@@ -1,0 +1,50 @@
+body, html, footer {
+  margin: 0px;
+}
+
+* {
+  vertical-align: middle;
+}
+
+.title {
+    font-family: serif;
+    font-size: 15px;
+}
+
+.KingsTitle {
+    font-family: fantasy;
+    font-size: 25px;
+    vertical-align: bottom;
+}
+
+.board {
+  width: 500px;
+  height: 500px;
+  color: #090a0a;
+  margin: 10px;
+  border-spacing: 3px;
+  float: left;
+}
+
+td {
+  width: 33.333333333%;
+  height: 33.333333333%;
+  border-color: #0b0c0c;
+  border: 2px solid;
+  text-align: center;
+  padding: 0px;
+}
+
+td:hover {
+  border: 2px solid yellow;
+}
+
+td canvas {
+  margin: 5px;
+}
+
+.sidebar {
+  float: right;
+  margin: 0px;
+  border: 2px solid black;
+}
