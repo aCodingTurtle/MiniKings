@@ -1,6 +1,9 @@
+//miniKings v0.0.1
+
+//starting cell assignment and initialization
 var startingNum = Math.floor(Math.random() * 10);
 console.info(startingNum + " is the starting number");
-var startingSquare = document.querySelector(".a1");
+var startingCell = document.querySelector(".a1");
 switch(startingNum) {
   default:
     startingCell = document.querySelector(".a1");
@@ -30,9 +33,12 @@ switch(startingNum) {
     startingCell = document.querySelector(".c3");
     break;
 }
+
+startingCell.innerHTML = '<i class="material-icons">memory</i>'
+
 var startingNumB = Math.floor(Math.random() * 10);
 console.info(startingNumB + " is the starting number for blue");
-var startingSquareB = document.querySelector(".a1");
+var startingCellB = document.querySelector(".a1");
 switch(startingNumB) {
   default:
     startingCellB = document.querySelector(".a1");
@@ -62,19 +68,14 @@ switch(startingNumB) {
     startingCellB = document.querySelector(".c3");
     break;
 }
+//end starting cell assignment
+
 
 var spaceToChange = document.querySelector(".a1");
 startingCell.style.backgroundColor = "orange";
 startingCellB.style.backgroundColor = "blue";
 var gold = 0;
 var goldMeter = document.querySelector(".goldCount");
-
-function battle() {
-        spaceToChange = document.querySelector(spaceClicked);
-        spaceToChange.style.backgroundColor = "orange";
-        gold++;
-        goldMeter.innerHTML = gold;
-}
 
 function clickOptions(spaceClicked) {
   var action = prompt("What would you like to do in this area? Type 1 for attacking, 2 for scouting, 3 for rebuilding, 4 for taxing.", "1, 2, 3 or 4");
@@ -99,4 +100,12 @@ function clickOptions(spaceClicked) {
         spaceToChange = document.querySelector(spaceClicked);
     }
   }
+}
+
+
+function battle() {
+        spaceToChange = document.querySelector(spaceClicked);
+        spaceToChange.style.backgroundColor = "orange";
+        gold++;
+        goldMeter.innerHTML = gold;
 }
