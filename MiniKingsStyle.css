@@ -1,32 +1,72 @@
+@media screen and (max-width: 600px) {
+    .title, .actionBar, .board, sidebar, footer {
+			float: none;
+			width: 100%;
+			margin: 1vw;
+	}
+}
+
 body, html, footer {
   margin: 0px;
 }
 
+html {
+	padding: 0px;
+	background: #EBEBEB;
+}
+
 * {
   vertical-align: middle;
+  position: static;
 }
 
 .title {
-    font-family: serif;
-    font-size: 15px;
+  font-family: monospace;
+  font-size: 3vh;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  vertical-align: top;
+  background-color: #989898;
+  margin: 0px;
+  padding: 1vh;
+}
+
+.title p {
+	margin: 0px;
 }
 
 .KingsTitle {
-    font-family: fantasy;
-    font-size: 25px;
-    vertical-align: bottom;
+  font-family: serif;
+  font-size: 8vh;
+}
+
+.actionBar {
+	width: 100vw;
+	height: 10vh;
+	margin: .5vh;
+}
+
+.gamecontainer {
+	margin: 0px;
+	width: 100%;
+	height: 70vh;
+	padding: 1vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
 }
 
 .board {
-  width: 500px;
-  height: 500px;
-  color: #090a0a;
-  margin: 10px;
-  border-spacing: 3px;
+  width: 70vh;
+  height: 70vh;
+  color: #000000;
+  background-color: #CACACA;
+  margin: auto;
+  border-spacing: 5px;
   float: left;
 }
 
-td {
+.board td {
   width: 33.333333333%;
   height: 33.333333333%;
   border-color: #0b0c0c;
@@ -35,16 +75,29 @@ td {
   padding: 0px;
 }
 
-td:hover {
-  border: 2px solid yellow;
+.board td:hover {
+  border: 5px solid green;
 }
 
-td canvas {
-  margin: 5px;
-}
-
-.sidebar {
-  float: right;
-  margin: 0px;
+sidebar {
+  margin: auto;
   border: 2px solid black;
+  max-width: 25vw;
+  height: 70vh;
+  float: right;
+}
+
+sidebar table {
+	width: 40vw;
+	height: 60vh;
+}
+
+
+
+footer {
+	width: 100%;
+	background-color: #A08888
+	float: none;
+	height: 2vh;
+	bottom: 0px;
 }

@@ -70,6 +70,20 @@ switch(startingNumB) {
 }
 //end starting cell assignment
 
+//start actionbar setup
+var actionBar = document.getElementById('actionBar');
+var ctx = actionBar.getContext('2d');
+var bubble = setInterval(bubbleFill, 1);
+var l = 0;
+function bubbleFill() {
+	ctx.fillStyle = "#00FDFF";
+	ctx.beginPath();
+	ctx.arc(20,20,l,0,2*Math.PI);
+	ctx.stroke();
+	l++;
+}
+
+//end actionbar
 
 var spaceToChange = document.querySelector(".a1");
 startingCell.style.backgroundColor = "orange";
