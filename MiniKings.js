@@ -73,15 +73,16 @@ switch(startingNumB) {
 //start actionbar setup
 var actionBar = document.getElementById('actionBar');
 var ctx = actionBar.getContext('2d');
-var bubble = setInterval(bubbleFill, 1);
-var l = 0;
-function bubbleFill() {
-	ctx.fillStyle = "#00FDFF";
-	ctx.beginPath();
-	ctx.arc(20,20,l,0,2*Math.PI);
-	ctx.stroke();
-	l++;
-}
+var width = 1;
+var bubble = setInterval(bubbleFill, 5);
+    function bubbleFill() {
+	if(width >= 1000){
+		clearInterval(bubble);
+	}
+	else {
+		width++;
+		actionBar.style.width = width + '%';
+}}//Loading bar code from W3S
 
 //end actionbar
 
