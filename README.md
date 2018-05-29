@@ -5,3 +5,5 @@ Currently working on: Finalizing rules, the stylesheet, and board layout.
 ```Version: 0.0.1```
 
 The goal is to show people that making a web game with stuff you just learned about the core web languages is possible.
+
+Everything is currently under construction, and nothing works.
