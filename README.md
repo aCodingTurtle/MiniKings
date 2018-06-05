@@ -1,9 +1,9 @@
 # MiniKings
-A strategy board game with pure HTML5, CSS, and JavaScript.
+A strategy board game created as a first real project.
 
-Currently working on: Finalizing rules, the stylesheet, and board layout.
+It was originally going to be just pure HTML5, CSS, and JavaScript. After encountering complications, we decided to switch to Python.
+
+Currently working on: Restarting.
 ```Version: 0.0.1```
-
-The goal is to show people that making a web game with stuff you just learned about the core web languages is possible.
 
 Everything is currently under construction, and nothing works.
