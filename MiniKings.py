@@ -1,43 +1,47 @@
-#MiniKings v0.1
 
-#imports
-import time
-import random
-from tkinter import *
-
-#titlescreen
-tk = Tk()
-canvas = Canvas(tk, width=400, height=400)
-canvas.pack()
-canvas.create_polygon(50, 25, 350, 25, 50, 100, 350, 100, fill=136,25,200)
-canvas.create_polygon(50, 125, 350, 125, 350, 175, 50, 125, fill=123,123, 123)
+ ###############################################################
+ #                                                             #
+ #                        MiniKings v0.1                       #
+ #                                                             #
+ ###############################################################
 
 
-#Pallete ideas
+from KingsModules import *
+
+running = True
+clock = pygame.time.Clock()
+fps = 60
+
+gs.menuSetup()
+while running:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+
+  gs.startButton = gs.playButton(brown, 150, 200)
+  gs.startButton.draw(window)
+
+  clock.tick(FPS)
 
 
-
-#event lists
-dIssues = []
-fIssues = []
-scoutOutcomes = []
-govIssues = []
-warIssues = []
-warFightResults = []
-tradeResults = []
-
+"""
 #interaction functions
 def scout(space):
-  #stuff
-  
+	#stuff
+
 def war(space):
-  #stuff - different from fighting
+	#stuff - different from fighting
 
 def dHappenings():
-  #stuff
+	#stuff
 
 def fHappenings():
-  #stuff
- 
+	#stuff
+
 def manageGov():
-  #stuff
+	#stuff
+
+"""
+#################################################################
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#################################################################
