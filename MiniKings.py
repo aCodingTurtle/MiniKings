@@ -23,9 +23,6 @@ class titleScreen():
     self.SettingButton = tk.Button(window, text='Settings')
     self.SettingButton.pack()
     
-root = tk.Tk()
-TitleScreen = titleScreen(root)
-root.mainloop()
 
 class gameScreen():
   
@@ -34,25 +31,33 @@ class gameScreen():
     window.title("MiniKings")
 
     
-    self.Header = tk.Frame(window).pack(side="top")
+    self.Header = tk.Frame(window)
+    self.Header.grid(column=0,row=0)
+    self.Header.grid_rowconfigure(0, weight=1)
+    self.Header.grid_columnconfigure(0, weight=1)
     
-    self.TitleLabel = tk.Label(Header, text='miniKings')
-    self.TitleLabel.grid()
+    self.TitleLabel = tk.Label(self.Header, text='miniKings')
+    self.TitleLabel.grid(row=0,column=0,columnspan=3,padx=5)
     
-    self.[N] = tk.[Type]([Frame], text='')
-    self.[N].grid()
+    self.SettingsButton = tk.Button(self.Header, text='Settings')
+    self.SettingsButton.grid(row=0,column=3,padx=5)
     
-    self.[N] = tk.[Type]([Frame], text='')
-    self.[N].grid()
+    self.SaveButton = tk.Button(self.Header, text='Save Game')
+    self.SaveButton.grid(row=0,column=4,padx=5)
     
-    self.[N] = tk.[Type]([Frame], text='')
-    self.[N].grid()
+    self.ExitButton = tk.Button(self.Header, text='Exit')
+    self.ExitButton.grid(row=0,column=5,padx=5)
     
-    
-    self.Board = tk.Frame(window).pack(side="left")
+
+    self.Board = tk.Frame(window).grid(column=0,row=1)
     
     for x in range(25):
+      ButtonName = ("Square" + str(x))
+      self.ButtonName = tk.Button(self.Board, text=str(x)).grid(column=(x % 5), row=int((x / 5)))
       
-      self.("Square" + str(x)) = tk.Button(Board, text='').grid((x % 5), (x / 5))
-      
-    
+
+root = tk.Tk()
+root.grid_rowconfigure(1, weight=1,minsize=200)
+root.grid_columnconfigure(0, weight=1)
+CurrentScreen = gameScreen(root)
+root.mainloop()
