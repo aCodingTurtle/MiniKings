@@ -32,7 +32,7 @@ class gameScreen():
 
     
     self.Header = tk.Frame(window)
-    self.Header.grid(column=0,row=0)
+    self.Header.grid(column=0,row=0,columnspan=2)
     self.Header.grid_rowconfigure(0, weight=1)
     self.Header.grid_columnconfigure(0, weight=1)
     
@@ -47,17 +47,29 @@ class gameScreen():
     
     self.ExitButton = tk.Button(self.Header, text='Exit')
     self.ExitButton.grid(row=0,column=5,padx=5)
-    
 
-    self.Board = tk.Frame(window).grid(column=0,row=1)
+
+    self.Board = tk.Frame(window)
+    self.Board.grid(column=0,row=1)
     
     for x in range(25):
       ButtonName = ("Square" + str(x))
       self.ButtonName = tk.Button(self.Board, text=str(x)).grid(column=(x % 5), row=int((x / 5)))
-      
+
+
+    self.ActionBar = tk.Frame(window)
+    self.ActionBar.grid(column=1,row=1)
+
+    self.ActionBook = tk.Notebook(ActionBar)
+    self.PAGEONE = tk.Frame(ActionBook)
+    self.PAGETWO = tk.Frame(ActionBook)
+    self.PAGETRE = tk.Frame(ActionBook)
+    ActionBook.add(PAGEONE, text='PAGEONE')
+    ActionBook.add(PAGETWO, text='PAGE2')
+    ActionBook.add(PAGETRE, text='PAGE3')
 
 root = tk.Tk()
 root.grid_rowconfigure(1, weight=1,minsize=200)
-root.grid_columnconfigure(0, weight=1)
+
 CurrentScreen = gameScreen(root)
 root.mainloop()
